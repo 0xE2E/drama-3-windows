@@ -27,7 +27,7 @@ tags:
 
 A Q4_K / Q8_0 release of [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3), paired with a Windows inference engine that places routed experts across system RAM and CUDA. Built with Fish Audio.
 
-[**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/tree/main/model) · [**Windows runtime**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Installation**](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/INSTALL.md)
+[**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/tree/main/model) · [**Windows runtime**](https://github.com/0xE2E/drama-3-windows/releases/latest) · [**Installation**](https://github.com/0xE2E/drama-3-windows/blob/main/docs/public/INSTALL.md)
 
 - **35.9B MoE** — 256 experts per layer, eight selected per token.
 - **Expressive voice cloning** — reference-conditioned speech with emotion and event tags.
@@ -93,7 +93,7 @@ Invoke-WebRequest -Uri "https://github.com/user-attachments/files/33393249/en0.w
 python -m fish_drama3.watchdog --output runs/demo-watchdog -- python -m examples.generate_model_card_demos --bundle models/drama3-windows/model --codec models/drama3-windows/codec/codec.gguf --reference en0.wav --output runs/demos
 ```
 
- Run [the demo generator](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/examples/generate_model_card_demos.py) through the runtime watchdog to reproduce the sequence. [Demo settings and measurements](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/demos/generation.json).
+ Run [the demo generator](https://github.com/0xE2E/drama-3-windows/blob/main/examples/generate_model_card_demos.py) through the runtime watchdog to reproduce the sequence. [Demo settings and measurements](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/demos/generation.json).
 
 </details>
 
@@ -145,11 +145,11 @@ Generation is offline. The external CLI watchdog reserves at least 1 GiB GPU mem
 
 ## Browser generation app
 
-The [local web app](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/WEB_UI.md) lets you load and unload the model, load the full podcast script, customize supported generation and expert-placement settings, play results and save WAV or MP3 with a settings JSON. Single pass is the default; chunked generation is optional. The studio starts with a 6144-frame budget and supports up to 8192 frames within a 10,240-row prompt-plus-output context limit. The studio requires the 0.2.0 Python runtime and matching native bridge. Automatic placement loads dense weights and request caches first, then fits complete expert banks against actual free memory with a 256 MiB workspace allowance and 3% total VRAM reserve. Manual mode supports 0–40 layers, initially 16; fit depends on hardware and request size. Continuous monitoring preserves 3% free VRAM and 8 GiB free host RAM. The percentage governs memory occupancy, not compute utilization. MP3 export requires FFmpeg. After installing the current runtime source, start it with `python -m fish_drama3.webui`, then open `http://127.0.0.1:7860`.
+The [local web app](https://github.com/0xE2E/drama-3-windows/blob/main/docs/public/WEB_UI.md) lets you load and unload the model, load the full podcast script, customize supported generation and expert-placement settings, play results and save WAV or MP3 with a settings JSON. Single pass is the default; chunked generation is optional. The studio starts with a 6144-frame budget and supports up to 8192 frames within a 10,240-row prompt-plus-output context limit. The studio requires the 0.2.0 Python runtime and matching native bridge. Automatic placement loads dense weights and request caches first, then fits complete expert banks against actual free memory with a 256 MiB workspace allowance and 3% total VRAM reserve. Manual mode supports 0–40 layers, initially 16; fit depends on hardware and request size. Continuous monitoring preserves 3% free VRAM and 8 GiB free host RAM. The percentage governs memory occupancy, not compute utilization. MP3 export requires FFmpeg. After installing the current runtime source, start it with `python -m fish_drama3.webui`, then open `http://127.0.0.1:7860`.
 
 ## Download & run
 
-Install the [Windows runtime and Python environment](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/INSTALL.md), then download the model and codec with their manifests:
+Install the [Windows runtime and Python environment](https://github.com/0xE2E/drama-3-windows/blob/main/docs/public/INSTALL.md), then download the model and codec with their manifests:
 
 ```powershell
 python -m pip install "huggingface_hub>=1.0,<2"
@@ -167,11 +167,11 @@ The root-level `Drama-3-35.9B-Q4_K-Q8_0.gguf` is an identical alias of `model/mo
 - **Intelligibility:** four short English checks had **0.0 ASR WER**; a Chinese plain-speech check had **0.0 CER**.
 - **Runtime stability:** a guarded two-hour run completed **713 speech requests** and **143 validation recovery cycles**, with identical acoustic codes for the repeated seeded request.
 
-These are targeted checks, not aggregate speech-quality or speaker-similarity scores. Seed-dependent incomplete generation and the evaluation method are documented in the [quality report](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/QUALITY.md).
+These are targeted checks, not aggregate speech-quality or speaker-similarity scores. Seed-dependent incomplete generation and the evaluation method are documented in the [quality report](https://github.com/0xE2E/drama-3-windows/blob/main/docs/public/QUALITY.md).
 
 ## Credits & license
 
-Model and reference implementation: [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) and [Fish Speech](https://github.com/fishaudio/fish-speech). Native codec integration derives from [s2.cpp](https://github.com/rodrigomatta/s2.cpp); backend and quantization components use [GGML](https://github.com/ggml-org/ggml). [audio.cpp](https://github.com/0xShug0/audio.cpp) and [Jmica's Drama 3 GGUF](https://huggingface.co/Jmica/Drama-3-GGUF) informed the porting survey. Pinned revisions and component attribution are in [NOTICE.md](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/NOTICE.md).
+Model and reference implementation: [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) and [Fish Speech](https://github.com/fishaudio/fish-speech). Native codec integration derives from [s2.cpp](https://github.com/rodrigomatta/s2.cpp); backend and quantization components use [GGML](https://github.com/ggml-org/ggml). [audio.cpp](https://github.com/0xShug0/audio.cpp) and [Jmica's Drama 3 GGUF](https://huggingface.co/Jmica/Drama-3-GGUF) informed the porting survey. Pinned revisions and component attribution are in [NOTICE.md](https://github.com/0xE2E/drama-3-windows/blob/main/NOTICE.md).
 
 Model-derived weights retain the **Fish Audio Community License v1.0**. The donor-derived codec is separately governed by the **Fish Audio Research License**, which requires a written Fish Audio agreement for commercial use. GGML components retain their MIT license. See [LICENSE](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/LICENSE) and [component licenses](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/tree/main/LICENSES).
 

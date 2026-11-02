@@ -4,7 +4,7 @@
 
 **Expressive speech, voice cloning and full-script narration in a local Windows studio.** Load Drama 3 once, shape the performance, listen and export your recording with the settings that made it.
 
-[**Get Windows Studio 0.2.1**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF) · [**Installation**](docs/public/INSTALL.md) · [**Studio guide**](docs/public/WEB_UI.md)
+[**Get Windows Studio 0.2.1**](https://github.com/0xE2E/drama-3-windows/releases/latest) · [**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF) · [**Installation**](docs/public/INSTALL.md) · [**Studio guide**](docs/public/WEB_UI.md)
 
 ![Windows Studio showing the script editor, generation controls and live system vitals](docs/assets/studio-overview.jpg)
 
