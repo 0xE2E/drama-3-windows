@@ -9,7 +9,7 @@ This guide installs or builds the Windows release `0.2.1` on Windows 11. The cur
   libraries target SM120; other GPU architectures require a compatible source build.
 - Visual Studio 2022 C++ build tools, CMake, and Ninja are required only when compiling the runtime from source.
 - For CUDA builds, an NVIDIA driver and CUDA Toolkit 13.3. The observed target was an RTX 5080 Laptop GPU with 16 GiB of VRAM.
-- The converted [model and codec bundles](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF), accessed under the applicable licenses. The original pinned checkpoint is needed only for local conversion. This source repository does not bundle weights.
+- The converted [model and codec bundles](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF), accessed under the applicable licenses. The original pinned checkpoint is needed only for local conversion. This source repository does not bundle weights.
 - Enough local disk for the source checkpoint, model and codec bundles, and build outputs. A complete converted model bundle is about 21.67 GiB and the codec about 1.46 GiB.
 
 ## Use the prebuilt Windows runtime
@@ -60,13 +60,13 @@ The recorded pins are:
 
 ## Download the converted model and codec
 
-The [Hugging Face bundle](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF)
+The [Hugging Face bundle](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF)
 contains ready-to-use model and codec files with their verification manifests.
 Install the download client and fetch each bundle into the directories used below:
 
 ```powershell
 python -m pip install "huggingface_hub>=1.0,<2"
-python -c "from huggingface_hub import snapshot_download; snapshot_download('Eng-Ahmd/Drama-3-Windows-GGUF', local_dir='models/drama3-windows', allow_patterns=['model/*', 'codec/*', 'LICENSE', 'LICENSES/*', 'NOTICE.md'])"
+python -c "from huggingface_hub import snapshot_download; snapshot_download('0xE2E/Drama-3-Windows-GGUF', local_dir='models/drama3-windows', allow_patterns=['model/*', 'codec/*', 'LICENSE', 'LICENSES/*', 'NOTICE.md'])"
 fish-drama3 synth --bundle models/drama3-windows/model --codec models/drama3-windows/codec/codec.gguf --text "Hello. This is local speech synthesis." --output outputs/hello.wav --gpu-expert-layers 12
 ```
 

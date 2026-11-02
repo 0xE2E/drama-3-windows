@@ -26,7 +26,7 @@ The model stays loaded across requests. Unload it when finished to release model
 
 ## Generate and listen
 
-Enter your script or load **The Small Signal**, the complete original 592-word [podcast script](../../examples/samples/podcast.txt). The default **Single pass** mode submits the full script in one request without text splitting or speech edits. The [published one-pass example](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF#podcast-%C2%B7-the-small-signal) completed the full script in one request without retries or speech edits: 195.79 seconds, with 0.34% ASR WER. This is one checked sample; other runs can omit or repeat words, stop early or pause. Automated transcription does not replace listening.
+Enter your script or load **The Small Signal**, the complete original 592-word [podcast script](../../examples/samples/podcast.txt). The default **Single pass** mode submits the full script in one request without text splitting or speech edits. The [published one-pass example](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF#podcast-%C2%B7-the-small-signal) completed the full script in one request without retries or speech edits: 195.79 seconds, with 0.34% ASR WER. This is one checked sample; other runs can omit or repeat words, stop early or pause. Automated transcription does not replace listening.
 
 The codec may decode the generated acoustic stream in bounded context windows to limit memory. Those decoder windows do not split the text into separate synthesis requests or edit speech.
 

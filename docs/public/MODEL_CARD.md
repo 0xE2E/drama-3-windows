@@ -19,7 +19,7 @@ tags:
   - moe
 ---
 
-![Drama 3 for Windows](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/assets/drama3-windows.svg)
+![Drama 3 for Windows](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/assets/drama3-windows.svg)
 
 # Drama 3 · Windows GGUF
 
@@ -27,7 +27,7 @@ tags:
 
 A Q4_K / Q8_0 release of [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3), paired with a Windows inference engine that places routed experts across system RAM and CUDA. Built with Fish Audio.
 
-[**Download the model**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/tree/main/model) · [**Windows runtime**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Installation**](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/INSTALL.md)
+[**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/tree/main/model) · [**Windows runtime**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Installation**](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/docs/public/INSTALL.md)
 
 - **35.9B MoE** — 256 experts per layer, eight selected per token.
 - **Expressive voice cloning** — reference-conditioned speech with emotion and event tags.
@@ -53,7 +53,7 @@ A single voice moves from a sigh to spoken dialogue and laughter, using `[sighs]
 <tr><th width="50%">Fish Audio original</th><th width="50%">Windows · Q4_K / Q8_0</th></tr>
 <tr>
 <td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://github.com/user-attachments/files/33393205/A1_point_tags.wav" type="audio/wav"></audio></td>
-<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/point-tags.wav" type="audio/wav"></audio></td>
+<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/point-tags.wav" type="audio/wav"></audio></td>
 </tr>
 </table>
 
@@ -65,7 +65,7 @@ Change **Wednesday → Thursday** in a spoken report reminder. The earlier take 
 <tr><th width="50%">Fish Audio original</th><th width="50%">Windows · Q4_K / Q8_0</th></tr>
 <tr>
 <td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://github.com/user-attachments/files/33393156/K1_edit_word_with_context.wav" type="audio/wav"></audio></td>
-<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/contextual-edit.wav" type="audio/wav"></audio></td>
+<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/contextual-edit.wav" type="audio/wav"></audio></td>
 </tr>
 </table>
 
@@ -77,7 +77,7 @@ Change the deadline from **noon → five**, with both earlier takes retained as 
 <tr><th width="50%">Fish Audio original</th><th width="50%">Windows · Q4_K / Q8_0</th></tr>
 <tr>
 <td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://github.com/user-attachments/files/33393164/K5_second_edit_chained.wav" type="audio/wav"></audio></td>
-<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/chained-edit.wav" type="audio/wav"></audio></td>
+<td><audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/chained-edit.wav" type="audio/wav"></audio></td>
 </tr>
 </table>
 
@@ -93,7 +93,7 @@ Invoke-WebRequest -Uri "https://github.com/user-attachments/files/33393249/en0.w
 python -m fish_drama3.watchdog --output runs/demo-watchdog -- python -m examples.generate_model_card_demos --bundle models/drama3-windows/model --codec models/drama3-windows/codec/codec.gguf --reference en0.wav --output runs/demos
 ```
 
- Run [the demo generator](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/examples/generate_model_card_demos.py) through the runtime watchdog to reproduce the sequence. [Demo settings and measurements](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/blob/main/demos/generation.json).
+ Run [the demo generator](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/examples/generate_model_card_demos.py) through the runtime watchdog to reproduce the sequence. [Demo settings and measurements](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/demos/generation.json).
 
 </details>
 
@@ -101,9 +101,9 @@ python -m fish_drama3.watchdog --output runs/demo-watchdog -- python -m examples
 
 **A complete 592-word podcast in one generation request.** This 3 minute 16 second recording uses the full script at once: no text chunks, retries, selected takes or speech edits.
 
-<audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3" type="audio/mpeg"></audio>
+<audio controls preload="metadata" style="width:100%;max-width:100%;"><source src="https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3" type="audio/mpeg"></audio>
 
-[WAV](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.wav) · [MP3](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3) · [Full script](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/blob/main/demos/podcast-small-signal.txt) · [Importable settings and provenance](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal-settings.json) · [Quality checks](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/blob/main/demos/podcast-small-signal-quality.json)
+[WAV](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.wav) · [MP3](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3) · [Full script](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/demos/podcast-small-signal.txt) · [Importable settings and provenance](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal-settings.json) · [Quality checks](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/demos/podcast-small-signal-quality.json)
 
 Generated through the 0.2.0 browser studio with the **en0** reference above, seed 123, temperature 0.7, top-p 0.7, top-k 30 and a 6144-frame budget. Automatic placement selected **15 GPU expert layers** with a 3% VRAM reserve; the cache context was 10,240 rows. The model ended normally at **4216 frames / 195.79 seconds**. The codec decoded the continuous acoustic stream in bounded context windows (1792 frames plus 256 context), without editing speech.
 
@@ -153,7 +153,7 @@ Install the [Windows runtime and Python environment](https://github.com/Eng-Ahmd
 
 ```powershell
 python -m pip install "huggingface_hub>=1.0,<2"
-python -c "from huggingface_hub import snapshot_download; snapshot_download('Eng-Ahmd/Drama-3-Windows-GGUF', local_dir='models/drama3-windows', allow_patterns=['model/*', 'codec/*', 'LICENSE', 'LICENSES/*', 'NOTICE.md'])"
+python -c "from huggingface_hub import snapshot_download; snapshot_download('0xE2E/Drama-3-Windows-GGUF', local_dir='models/drama3-windows', allow_patterns=['model/*', 'codec/*', 'LICENSE', 'LICENSES/*', 'NOTICE.md'])"
 fish-drama3 synth --bundle models/drama3-windows/model --codec models/drama3-windows/codec/codec.gguf --text "Every voice has a story. Let's make yours heard." --output outputs/hello.wav --gpu-expert-layers 12
 ```
 
@@ -173,6 +173,6 @@ These are targeted checks, not aggregate speech-quality or speaker-similarity sc
 
 Model and reference implementation: [Fish Audio Drama 3](https://huggingface.co/fishaudio/drama-3) and [Fish Speech](https://github.com/fishaudio/fish-speech). Native codec integration derives from [s2.cpp](https://github.com/rodrigomatta/s2.cpp); backend and quantization components use [GGML](https://github.com/ggml-org/ggml). [audio.cpp](https://github.com/0xShug0/audio.cpp) and [Jmica's Drama 3 GGUF](https://huggingface.co/Jmica/Drama-3-GGUF) informed the porting survey. Pinned revisions and component attribution are in [NOTICE.md](https://github.com/Eng-Ahmd/drama-3-windows/blob/main/NOTICE.md).
 
-Model-derived weights retain the **Fish Audio Community License v1.0**. The donor-derived codec is separately governed by the **Fish Audio Research License**, which requires a written Fish Audio agreement for commercial use. GGML components retain their MIT license. See [LICENSE](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/blob/main/LICENSE) and [component licenses](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/tree/main/LICENSES).
+Model-derived weights retain the **Fish Audio Community License v1.0**. The donor-derived codec is separately governed by the **Fish Audio Research License**, which requires a written Fish Audio agreement for commercial use. GGML components retain their MIT license. See [LICENSE](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/blob/main/LICENSE) and [component licenses](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/tree/main/LICENSES).
 
 Use voice references with the necessary rights and speaker consent. This is an independent Windows integration. **Built with Fish Audio.**

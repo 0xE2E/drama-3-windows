@@ -4,7 +4,7 @@
 
 **Expressive speech, voice cloning and full-script narration in a local Windows studio.** Load Drama 3 once, shape the performance, listen and export your recording with the settings that made it.
 
-[**Get Windows Studio 0.2.1**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Download the model**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF) · [**Installation**](docs/public/INSTALL.md) · [**Studio guide**](docs/public/WEB_UI.md)
+[**Get Windows Studio 0.2.1**](https://github.com/Eng-Ahmd/drama-3-windows/releases/latest) · [**Download the model**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF) · [**Installation**](docs/public/INSTALL.md) · [**Studio guide**](docs/public/WEB_UI.md)
 
 ![Windows Studio showing the script editor, generation controls and live system vitals](docs/assets/studio-overview.jpg)
 
@@ -37,19 +37,19 @@ https://github.com/user-attachments/assets/a59179be-b1dc-45d2-b049-f5105606cf0a
 
 *Play here without leaving GitHub. Enable sound in the player if it starts muted. The video pairs the original narration with static artwork; WAV and MP3 downloads remain below.*
 
-[**The Small Signal · 3:16**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF#podcast-%C2%B7-the-small-signal) is an original 592-word narration generated in **one request, without text chunks, retries or speech edits**. Load the included sample in the studio to try it yourself.
+[**The Small Signal · 3:16**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF#podcast-%C2%B7-the-small-signal) is an original 592-word narration generated in **one request, without text chunks, retries or speech edits**. Load the included sample in the studio to try it yourself.
 
-[**Listen / download MP3**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3) · [**Lossless WAV**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.wav) · [Full script](examples/samples/podcast.txt) · [Importable settings and provenance](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal-settings.json)
+[**Listen / download MP3**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.mp3) · [**Lossless WAV**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal.wav) · [Full script](examples/samples/podcast.txt) · [Importable settings and provenance](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/podcast-small-signal-settings.json)
 
 The untouched recording completed at 4216 frames and measured **0.34% ASR word error rate** (2 edits / 592 words), with no clipped samples. This is one checked example; automated transcription does not replace listening or establish general long-form quality.
 
 ### More ways to shape a voice
 
-- [**Expressive tags**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/point-tags.wav) — spoken dialogue with sighs and laughter.
-- [**Contextual edit**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/contextual-edit.wav) — revise Wednesday to Thursday using the earlier take as context.
-- [**Chained edit**](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF/resolve/main/demos/chained-edit.wav) — revise the deadline again while retaining earlier acoustic history.
+- [**Expressive tags**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/point-tags.wav) — spoken dialogue with sighs and laughter.
+- [**Contextual edit**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/contextual-edit.wav) — revise Wednesday to Thursday using the earlier take as context.
+- [**Chained edit**](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF/resolve/main/demos/chained-edit.wav) — revise the deadline again while retaining earlier acoustic history.
 
-[Compare these recordings with the original Fish Audio demos](https://huggingface.co/Eng-Ahmd/Drama-3-Windows-GGUF#listen-original-vs-windows).
+[Compare these recordings with the original Fish Audio demos](https://huggingface.co/0xE2E/Drama-3-Windows-GGUF#listen-original-vs-windows).
 
 ## Start creating
 
